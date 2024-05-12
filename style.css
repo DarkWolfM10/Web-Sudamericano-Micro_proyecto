@@ -1,52 +1,106 @@
-/* Estilos básicos */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+:root {
+	--color-back:#4b4e53;
+	--color-blue-1:#94e0ff;
+	--color-blue-2:#2b7bc6;
+	--color-brown-1:#ffa86f;
+	--color-brown-2:#f2851d;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+body {
+	display: flex;
+	flex-flow: column wrap;
+	margin: 0;
 }
 
 header {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0.5rem;
+	background-color: var(--color-back);
+}
+
+div.logo , nav , ul{
+	display: flex;
+}
+
+img {
+	margin: auto 1.56rem auto 0 ;
+}
+
+.title {
+	font: bold 1.5rem "Times New Roman";
+}
+
+div.logo > p {
+	background-color: var(--color-blue-2);
+	color: var(--color-back);
+	padding: 0.75rem;
+	border-radius: 0.65rem;
+}
+
+nav {
+	justify-content: flex-end;
+	align-items: center;
+}
+
+ul {
+	flex-flow: row nowrap;
+}
+
+li {
+	margin: auto 0.625rem;
+	list-style: none;
+}
+
+a {
+	color: var(--color-blue-1);
+	font-weight: bold;
+	text-decoration: none;
+	transition: 1s;
+}
+
+li > a:hover {
+	color: var(--color-back);
+	background-color: var(--color-blue-1);
+	transform: scale(1.1);
+	font: 700;
+	border-radius: 0.625rem;
+}
+
+main {
+	display: grid;
+	margin: 0 .25rem;
+}
+
+.game {
+	height: calc(82vw * 0.43);
+	width: 82vw;
+	background-color: var(--color-blue-1);
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	border: 0.4rem solid var(--color-blue-2);
+	border-radius: 0.7rem;
+	cursor: pointer;
+}
+
+footer {
+	background-color: var(--color-back);
+	color: var(--color-blue-1);
+}
+
+footer > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+span {
+	font-weight: bold;
+}
+
+.about-us {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-h1 {
-    color: #333;
-}
-
-#question-container {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#question {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-#answers {
-    list-style-type: none;
-    padding: 0;
-}
-
-#answers li {
-    margin-bottom: 10px;
-}
-
-/* Estilos para jugadores */
-.player {
-    margin-bottom: 10px;
-}
-
-.player label {
-    display: inline-block;
-    width: 120px;
 }
